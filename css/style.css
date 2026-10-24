@@ -204,3 +204,106 @@ body {
     background-color: #fff3cd;
     color: #664d03;
 }
+/* ===== Tableau des commandes ===== */
+.table-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.table-card .table {
+    margin-bottom: 0;
+    background-color: #ffffff;
+}
+
+.table-card thead.table-light th {
+    background-color: #f7f8fb;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding: 14px 16px;
+    border-bottom: 2px solid #e9ecef;
+    white-space: nowrap;
+}
+
+.table-card tbody td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f2f5;
+    color: #343a40;
+    font-size: 0.92rem;
+}
+
+.table-card tbody tr {
+    transition: background-color 0.15s ease;
+}
+.table-card tbody tr:hover {
+    background-color: #f4f7fb;
+}
+
+.table-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-card tbody td:first-child {
+    font-weight: 600;
+    color: #212529;
+}
+
+.table-card tbody td:nth-child(5),
+.table-card thead th:nth-child(5) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.table-card .badge {
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+}
+
+.table-card .btn-detail {
+    font-size: 0.82rem;
+    padding: 5px 14px;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+.table-card .btn-detail:hover {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+.table-card tbody td.text-center {
+    padding: 40px 16px;
+    font-style: italic;
+    color: #8a919a;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c7cdd4;
+    border-radius: 3px;
+}
+
+/* ===== Modal détail ===== */
+#orderModal .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+#orderModal .modal-header {
+    border-bottom: 1px solid #eef1f4;
+    background-color: #f7f8fb;
+    border-radius: 12px 12px 0 0;
+}
+#orderModal .modal-body table th,
+#orderModal .modal-body table td {
+    font-size: 0.9rem;
+}

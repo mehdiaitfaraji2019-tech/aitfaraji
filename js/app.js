@@ -1,7 +1,7 @@
 import { state } from "./state.js";
 import { fetchData } from "./dataService.js";
 import { getVisibleOrders, getCustomer, getProduct, getLineAmount, getOrderTotal } from "./selectors.js";
-import { renderOrders, renderStats, showError, renderOrderDetail } from "./view.js";
+import { renderOrders, renderStats, showError, renderOrderDetail, renderActiveFilters } from "./view.js";
 const searchInput = document.querySelector("#searchInput");
 const statusButtons = document.querySelectorAll(".status-btn");
 const categoryButtons = document.querySelectorAll(".category-btn");
@@ -10,6 +10,7 @@ const render = () => {
     const visibleOrders = getVisibleOrders();
     renderOrders(visibleOrders);
     renderStats(state.orders);
+    renderActiveFilters(state.status, state.category);
 };
 searchInput.addEventListener("input", (e) => {
     state.search = e.target.value.trim();

@@ -62,14 +62,45 @@ export const showError = (message) => {
 };
 
 export const renderOrderDetail = (order) => {
-    // 1. Remplir les infos de base
     const customer = getCustomer(order.customerId);
+
     document.querySelector("#modalOrderId").textContent = `Commande #${order.id}`;
     document.querySelector("#modalClientName").textContent = customer ? customer.name : "Inconnu";
-    document.querySelector("#modalTotal").textContent = `${getOrderTotal(order)} DH`;
-    document.querySelector("#modalStatus").textContent = order.status;
+    document.querySelector("#modalClientCity").textContent = customer ? customer.city : "—";
     document.querySelector("#modalDate").textContent = order.date;
+    document.querySelector("#modalStatus").textContent = order.status;
+    document.querySelector("#modalTotal").textContent = `${getOrderTotal(order)} DH`;
+
+    const itemsBody = document.querySelector("#modalItemsBody");
+    itemsBody.innerHTML = order.items.map(item => {
+        const product = getProduct(item.productId);
+        const price = product ? product.price : 0;
+        const name = product ? product.name : "Produit inconnu";
+        const lineAmount = getLineAmount(item);
+        return `
+            <tr>
+                <td>${name}</td>
+                <td class="text-end">${price} DH</td>
+                <td class="text-end">${item.quantity}</td>
+                <td class="text-end">${lineAmount} DH</td>
+            </tr>
+        `;
+    }).join("");
+
     const modalElement = document.querySelector("#orderModal");
     const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
     modal.show();
+};
+export const renderActiveFilters = (status, category) => {
+    document.querySelectorAll("#statusFilters .status-btn").forEach(btn => {
+        const active = btn.dataset.status === status;
+        btn.classList.toggle("btn-dark", active);
+        btn.classList.toggle("btn-outline-dark", !active);
+    });
+
+    document.querySelectorAll("#categoryFilters .category-btn").forEach(btn => {
+        const active = btn.dataset.category === category;
+        btn.classList.toggle("btn-dark", active);
+        btn.classList.toggle("btn-outline-dark", !active);
+    });
 };

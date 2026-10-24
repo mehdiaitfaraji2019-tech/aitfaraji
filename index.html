@@ -60,15 +60,15 @@
 
             <hr class="my-4 text-muted">
             <p class="fw-semibold mb-2">Statut de la commande</p>
-            <div class="d-flex flex-wrap gap-2 mb-4">
+            <div class="d-flex flex-wrap gap-2 mb-4" id="statusFilters">
                 <button class="btn btn-dark status-btn" data-status="all">Toutes</button>
                 <button class="btn btn-outline-dark status-btn" data-status="Livrée">Livrées</button>
                 <button class="btn btn-outline-dark status-btn" data-status="En attente">En attente</button>
                 <button class="btn btn-outline-dark status-btn" data-status="Annulée">Annulées</button>
             </div>
             <p class="fw-semibold mb-2">Catégorie de jeu</p>
-            <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-dark category-btn" data-category="all">Toutes</button>
+            <div class="d-flex flex-wrap gap-2" id="categoryFilters">
+                        <button class="btn btn-dark category-btn" data-category="all">Toutes</button>
                 <button class="btn btn-outline-dark category-btn" data-category="Aventure">Aventure</button>
                 <button class="btn btn-outline-dark category-btn" data-category="Action-RPG">Action-RPG</button>
                 <button class="btn btn-outline-dark category-btn"
@@ -81,7 +81,7 @@
         <div id="errorMessage" class="alert alert-danger d-none">
             Impossible de charger les données.
         </div>
-        <section class="table-responsive bg-white rounded shadow-sm">
+        <section class="table-card table-responsive">
             <table class="table align-middle mb-0">
                 <thead class="table-light">
                     <tr>
@@ -109,14 +109,30 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <p class="mb-2"><strong>Client :</strong> <span id="modalClientName"></span></p>
-                        <p class="mb-2"><strong>Montant :</strong> <span id="modalTotal"></span></p>
-                        <p class="mb-2"><strong>Statut :</strong> <span id="modalStatus"></span></p>
-                        <p class="mb-2"><strong>Paiement :</strong> <span id="modalPayment">Payée</span></p>
-                        <p class="mb-2"><strong>Date :</strong> <span id="modalDate"></span></p>
-                    </div>
-                </div>
+    <div class="mb-3">
+        <p class="mb-2"><strong>Client :</strong> <span id="modalClientName"></span></p>
+        <p class="mb-2"><strong>Ville :</strong> <span id="modalClientCity"></span></p>
+        <p class="mb-2"><strong>Date :</strong> <span id="modalDate"></span></p>
+        <p class="mb-2"><strong>Statut :</strong> <span id="modalStatus"></span></p>
+    </div>
+
+    <h6 class="fw-semibold mt-4">Produits commandés</h6>
+    <div class="table-responsive">
+        <table class="table table-sm align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Produit</th>
+                    <th class="text-end">Prix</th>
+                    <th class="text-end">Qté</th>
+                    <th class="text-end">Montant</th>
+                </tr>
+            </thead>
+            <tbody id="modalItemsBody"></tbody>
+        </table>
+    </div>
+
+    <p class="mb-0 text-end mt-3"><strong>Total :</strong> <span id="modalTotal"></span></p>
+</div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
