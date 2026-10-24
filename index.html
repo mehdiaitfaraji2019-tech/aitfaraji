@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrazyGAMES - Commandes</title>
+    <link rel="icon" type="image/x-icon" href="play.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="page-header py-5">
+        <div class="container text-center">
+            <img src="play.png" alt="Logo CrazyGAMES" class="img-fluid mb-3" style="max-width: 120px;">
+            <h1 class="fw-bold mb-1">CrazyGAMES</h1>
+            <p class="text-white">Tableau de bord des commandes</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <section class="row g-4 mb-5">
+            <div class="col-6 col-md-3">
+                <div class="stat-card text-center">
+                    <p class="text-muted mb-1">Commandes</p>
+                    <h2 id="totalOrders" class="h3 mb-0">0</h2>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card text-center">
+                    <p class="text-muted mb-1">Livrées</p>
+                    <h2 id="deliveredOrders" class="h3 mb-0">0</h2>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card text-center">
+                    <p class="text-muted mb-1">Clients</p>
+                    <h2 id="totalCustomers" class="h3 mb-0">0</h2>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card text-center">
+                    <p class="text-muted mb-1">Montant Total</p>
+                    <h2 id="totalAmount" class="h3 mb-0">0 DH</h2>
+                </div>
+            </div>
+        </section>
+        <section id="recherche" class="filter-card mb-4">
+
+            <!-- Recherche par client -->
+            <div class="row g-3 align-items-end mb-3">
+                <div class="col-md-12">
+                    <label for="searchInput" class="form-label fw-semibold">Rechercher un client</label>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Exemple : Nadal">
+                </div>
+            </div>
+
+            <hr class="my-4 text-muted">
+            <p class="fw-semibold mb-2">Statut de la commande</p>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <button class="btn btn-dark status-btn" data-status="all">Toutes</button>
+                <button class="btn btn-outline-dark status-btn" data-status="Livrée">Livrées</button>
+                <button class="btn btn-outline-dark status-btn" data-status="En attente">En attente</button>
+                <button class="btn btn-outline-dark status-btn" data-status="Annulée">Annulées</button>
+            </div>
+            <p class="fw-semibold mb-2">Catégorie de jeu</p>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-dark category-btn" data-category="all">Toutes</button>
+                <button class="btn btn-outline-dark category-btn" data-category="Aventure">Aventure</button>
+                <button class="btn btn-outline-dark category-btn" data-category="Action-RPG">Action-RPG</button>
+                <button class="btn btn-outline-dark category-btn"
+                    data-category="Action-aventure">Action-aventure</button>
+                <button class="btn btn-outline-dark category-btn"
+                    data-category="Jeu de simulation de football">Football</button>
+            </div>
+        </section>
+        <p id="resultCount" class="text-muted mb-3">Chargement...</p>
+        <div id="errorMessage" class="alert alert-danger d-none">
+            Impossible de charger les données.
+        </div>
+        <section class="table-responsive bg-white rounded shadow-sm">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>N° Commande</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Statut</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 id="modalOrderId" class="modal-title fs-5">Détail de la commande</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p class="mb-2"><strong>Client :</strong> <span id="modalClientName"></span></p>
+                        <p class="mb-2"><strong>Montant :</strong> <span id="modalTotal"></span></p>
+                        <p class="mb-2"><strong>Statut :</strong> <span id="modalStatus"></span></p>
+                        <p class="mb-2"><strong>Paiement :</strong> <span id="modalPayment">Payée</span></p>
+                        <p class="mb-2"><strong>Date :</strong> <span id="modalDate"></span></p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+[
+{
+  "id": 101,
+  "customerId": 1,
+  "status": "En attente",
+  "date": "2026-07-07",
+  "items": [
+    {
+      "productId": 13,
+      "quantity": 2
+    },
+    {
+      "productId": 14,
+      "quantity": 1
+    }
+  ]
+},
+{
+  "id": 102,
+  "customerId": 2,
+  "status": "Annulée",
+  "date": "2026-06-24",
+  "items": [
+    {
+      "productId": 13,
+      "quantity": 1
+    },
+    {
+      "productId": 16,
+      "quantity": 1
+    }
+  ]
+},
+{
+  "id": 103,
+  "customerId": 3,
+  "status": "Livrée",
+  "date": "2026-07-08",
+  "items": [
+    {
+      "productId": 15,
+      "quantity": 1
+    }
+  ]
+},
+{
+  "id": 104,
+  "customerId": 4,
+  "status": "Annulée",
+  "date": "2026-07-29",
+  "items": [
+    {
+      "productId": 16,
+      "quantity": 3
+    }
+  ]
+},
+{
+  "id": 105,
+  "customerId": 5,
+  "status": "En attente",
+  "date": "2026-08-02",
+  "items": [
+    {
+      "productId": 17,
+      "quantity": 1
+    }
+  ]
+},
+{
+  "id": 106,
+  "customerId": 6,
+  "status": "Annulée",
+  "date": "2026-08-07",
+  "items": [
+    {
+      "productId": 12,
+      "quantity": 3
+    }
+  ]
+},
+{
+  "id": 107,
+  "customerId": 7,
+  "status": "Annulée",
+  "date": "2026-08-15",
+  "items": [
+    {
+      "productId": 11,
+      "quantity": 2
+    }
+  ]
+},
+{
+  "id": 108,
+  "customerId": 3,
+  "status": "En attente",
+  "date": "2026-08-19",
+  "items": [
+    {
+      "productId": 9,
+      "quantity": 2
+    }
+  ]
+},
+{
+  "id": 109,
+  "customerId": 5,
+  "status": "En attente",
+  "date": "2026-08-26",
+  "items": [
+    {
+      "productId": 10,
+      "quantity": 2
+    }
+  ]
+},
+{
+  "id": 110,
+  "customerId": 1,
+  "status": "En attente",
+  "date": "2026-09-02",
+  "items": [
+    {
+      "productId": 15,
+      "quantity": 4
+    }
+  ]
+},
+{
+  "id": 111,
+  "customerId": 2,
+  "status": "En attente",
+  "date": "2026-09-02",
+  "items": [
+    {
+      "productId": 14,
+      "quantity": 4
+    }
+  ]
+}
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 9,
+    "name": "The Legend of Zicole: Tears of the Kingdom",
+    "category": "Aventure",
+    "price": 550,
+    "stock": 7
+  },
+  {
+    "id": 10,
+    "name": "Rings of Power",
+    "category": "Action-RPG",
+    "price": 500,
+    "stock": 6
+  },
+  {
+    "id": 11,
+    "name": "Spider-Man 2",
+    "category": "Action-aventure",
+    "price": 370,
+    "stock": 13
+  },
+  {
+    "id": 12,
+    "name": "Forza Horizon 5",
+    "category": "Jeu de course en monde ouvert",
+    "price": 240,
+    "stock": 20
+  },
+  {
+    "id": 13,
+    "name": "Fortnite",
+    "category": "Jeu en ligne de construction stratégique",
+    "price": 99,
+    "stock": 14
+  },
+  {
+    "id": 14,
+    "name": "The Witcher 3",
+    "category": "Jeu de rôle en monde ouvert",
+    "price": 330,
+    "stock": 40
+  },
+  {
+    "id": 15,
+    "name": "FIFA 2024",
+    "category": "Jeu de simulation de football",
+    "price": 299,
+    "stock": 11
+  },
+  {
+    "id": 16,
+    "name": "The House of the Dragon",
+    "category": "Action-RPG en monde ouvert",
+    "price": 170,
+    "stock": 32
+  },
+  {
+    "id": 17,
+    "name": "God of War Ragnarok",
+    "category": "Action-aventure",
+    "price": 99,
+    "stock": 9
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Rafael NADAL",
+    "city": "Madrid",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Andy Maurray",
+    "city": "Londres",
+    "active": false
+  },
+  {
+    "id": 3,
+    "name": "Novak JOKOVIC",
+    "city": "Braga",
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Roger FEDERER",
+    "city": "Bazel",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Carlos ALKARAZ",
+    "city": "Madrid",
+    "active": false
+  },
+  {
+    "id": 6,
+    "name": "Serena WILLIAMS",
+    "city": "New-York",
+    "active": false
+  },
+  {
+    "id": 7,
+    "name": "Stan WAWRINKA",
+    "city": "Genève",
+    "active": false
+  }
+]
